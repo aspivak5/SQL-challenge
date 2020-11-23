@@ -51,10 +51,10 @@ on dept_emp.dept_no = departments.dept_no
 where dept_name in ('Sales','Development');
 
 --In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
-select employees.last_name,
-count(employees.last_name) as "Frequency of last names"
+select last_name,
+count(last_name) as "Frequency of last names"
 from employees
-group by employees.last_name
+group by last_name
 order by "Frequency of last names" desc;
 
 
